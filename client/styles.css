@@ -28,6 +28,8 @@
   src: url("/client/fonts/test-geograph-regular.woff2") format("woff2");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +38,7 @@
 :root {
   --color-primary: rgb(15, 20, 16);
   --color-secondary: #27ae60;
+  --color-tertiary: #51c652;
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -49,11 +52,35 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-primary);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #081706;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-tertiary);
+  height: 2px;
+  border-radius: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
 body {
   background-color: var(--color-primary);
   font-size: 1.1rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .home-wrapper {
@@ -66,7 +93,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100lvh;
   width: 100%;
   background-color: var(--color-primary);
 }
@@ -74,9 +101,8 @@ body {
 .navbar {
   font-family: "klim";
   font-size: 15px;
-  position: fixed;
-  top: 0;
-  right: 10px;
+  right: 0rem; /* Add this line */
+
   /* background-color: #333; */
   padding: 10px 20px;
 }
@@ -95,7 +121,6 @@ ul {
 
 li {
   display: inline-block;
-  padding: 0 20px;
 }
 
 a {
@@ -127,18 +152,8 @@ a {
 .name {
   font-family: "klimfont";
   font-weight: bold;
-  /* line-height: 0.7em; */
-  font-size: 125px;
   text-align: center;
-  margin-bottom: 20%;
-  margin-right: auto;
-  margin-left: 11%;
-  display: flex;
-  flex-direction: column;
   line-height: 0.69;
-  margin-top: 0;
-  transform: translateY(50%);
-  align-items: flex-end;
 }
 
 .name .subtitle {
@@ -167,8 +182,7 @@ a {
   font-size: 16px;
   letter-spacing: 0.1em;
   color: #d3d1d192;
-  line-height: 1.1rem;
-  text-align: center;
+  line-height: 0.9rem;
   padding-right: 5%;
   padding-left: 10%;
   transform: translateY(-10%);
@@ -177,11 +191,23 @@ a {
   padding-bottom: 10px;
 }
 
+.about-pic {
+  padding-bottom: 20px;
+}
+
 .profile-pic img {
   border: solid 2px rgba(129, 169, 141, 0.527);
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 180px; /* adjust to your desired size */
   height: 180px; /* adjust to your desired size */
+}
+
+.about-pic img {
+  /* border-radius: 50%; */
+  width: 260px; /* adjust to your desired size */
+  height: 240px; /* adjust to your desired size */
+  margin: 10px;
+  margin-top: 30px;
 }
 
 /* .pic-wrapper {
@@ -201,60 +227,51 @@ a {
   color: #51c652;
 }
 
-#main-wrapper {
+.main-wrapper {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: scroll; /* Add this line */
 }
 
 .about-wrapper {
-  font-family: "content";
-
-  /* margin: 0 auto; */
-
-  /* display: flex; */
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
+  font-family: "poppins";
   height: 100vh;
   /* width: 100%; */
   background-color: var(--color-primary);
-  /* width: 80%; */
-  font-size: 14px;
-  letter-spacing: 0.1em;
+  margin: 0 auto;
+  /* font-size: 16px; */
+  letter-spacing: 0.01em;
   color: #d3d1d1ec;
-  line-height: 1.1rem;
-  text-align: center;
-  /* padding-right: 5%;
-  padding-left: 10%;
-  transform: translateY(-10%); */
-  margin: 0 50px;
-  padding: 0 50px;
 }
 
 #about-me {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.about-wrapper #about-me .container {
-  width: 40%;
-  margin-left: 40px;
-  line-height: 1.5rem;
+.about-wrapper #about-me .about {
+  line-height: 0.5rem;
 }
 
-.about-wrapper #about-me .container p span {
-  font-family: "klim";
+.about-wrapper #about-me .about p {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6rem;
+  font-size: 1.05rem;
 }
-.about-wrapper #about-me .container h1 {
+
+.about-wrapper #about-me .about p span {
   font-family: "klim";
-  margin-bottom: 15px;
-  font-size: 45px;
 }
 
 .about-wrapper #about-me .skills {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #27ae60;
+  width: 500px;
+  height: 300px;
+  border-radius: 5%;
+  background-color: #29352725;
+  border: 1px solid #070e0e;
+}
+
+.skillsMobile {
+  width: 100%;
+  height: 300px;
+  border-radius: 5%;
+  background-color: #29352725;
+  border: 1px solid #070e0e;
 }

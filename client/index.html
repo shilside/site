@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Site</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&family=Schibsted+Grotesk:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/8e2163df8a.js"
       crossorigin="anonymous"
@@ -13,88 +25,307 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <div id="home"></div>
       <div class="home-wrapper">
-        <div class="navbar">
+        <div class="navbar fixed top-0 w-full bg-darkgreen">
           <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Projects</a></li>
+            <ul id="nav-items" class="md:justify-center md:gap-24 lg:gap-14">
+              <li class="nav">
+                <a href="#home">Home</a>
+              </li>
+              <li class="nav"><a href="#about">About</a></li>
+              <li class="nav"><a href="#">Projects</a></li>
+              <li class="nav">
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </nav>
         </div>
 
-        <div class="name">
-          Joshua
-          <br />
-          Njoku
-          <br />
-          <span class="subtitle"
-            >Web Developer
+        <div class="flex justify-center items-center">
+          <div class="name md:text-big mb-11">
+            Joshua
             <br />
-            <span class="city">Montreal, QC</span>
-          </span>
-        </div>
-        <div class="content">
-          <div class="pic-wrapper">
-            <div class="profile-pic">
-              <img src="/client/img/smh.jpeg" alt="profile-pic" />
-            </div>
+            Njoku
+            <br />
+            <span class="subtitle"
+              >Web Developer
+              <br />
+              <span class="city">Montreal, QC</span>
+            </span>
           </div>
-          <p>
-            "Im a <span>Full-Stack</span> Web Developer specialized in building
-            robust <span>backend systems</span> and
-            <span>creating AI chatbots.</span> My focus is on developing
-            human-centered, accessible digital products. I also passionately
-            write and make Music and I edit Videos on the side. I strive to push
-            the boundaries of Software Engineering. "
-          </p>
+          <div class="content hidden lg:flex">
+            <div class="pic-wrapper">
+              <div class="profile-pic">
+                <img
+                  src="/client/img/smh.jpeg"
+                  alt="profile-pic"
+                  class="rounded-bullet"
+                />
+              </div>
+            </div>
+            <p>
+              "Im a <span>Full-Stack</span> Web Developer specialized in
+              building robust <span>backend systems</span> and
+              <span>creating AI chatbots.</span> My focus is on developing
+              human-centered, accessible digital products. I also passionately
+              write and make Music and I edit Videos on the side. I strive to
+              push the boundaries of Software Engineering. "
+            </p>
+          </div>
         </div>
 
-        <div class="icons">
+        <div class="icons hidden sm:flex">
           <a href="https://www.instagram.com"
-            ><i class="fab fa-instagram"></i
+            ><i class="fab fa-instagram nav"></i
           ></a>
-          <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com"><i class="fab fa-twitter nav"></i></a>
+          <a href="https://github.com"><i class="fab fa-github nav"></i></a>
           <a href="https://www.linkedin.com"
-            ><i class="fa-brands fa-linkedin-in"></i
+            ><i class="fa-brands fa-linkedin-in nav"></i
           ></a>
         </div>
       </div>
-      <div class="about-wrapper">
-        <section id="about-me">
-          <div class="skills"></div>
-          <div class="container">
-            <em><h1>About Me</h1></em>
-            <p>
-              Greetings, my name is <span>Joshua Njoku</span>, and I am a
-              dedicated <span>Full-Stack Web Developer</span> with a penchant
-              for creative problem-solving. Currently based in
-              <span>Montreal, Canada</span> my formative years were spent in
-              Rivers State, Nigeria, where I developed a love for solving math
-              problems that would eventually lead me to the World of
-              Programming. During the pandemic, I took it upon myself to learn
-              programming and enrolled in a
-              <span>Full-Stack Engr. Bootcamp </span>at
-              <span>McGill University</span>, which I successfully
-              completed<span>&#x2705;</span>. Programming has since become more
-              than a career choice for me; it is a passion that allows me to
-              channel my creative energy into building innovative projects. I am
-              also an aspiring musician who goes by the stage name
-              <span>"Shilside"</span>. I have always been drawn to the art of
-              creation, and programming has provided me with the perfect
-              platform to express myself. I am continuously looking for new and
+      <div id="about" class="about-wrapper pt-16 mt-12">
+        <section
+          id="about-me"
+          class="flex justify-center items-center md:h-screen"
+        >
+          <div
+            class="about text-center md:text-left m-roy md:pl-6 p-2 pb-24 md:w-2/5"
+          >
+            <h1
+              class="inline-block mt-4 font-schib text-half text-lightgreen md:text-4xl"
+            >
+              About Me
+            </h1>
+            <div class="pic-wrapper flex md:hidden justify-center mt-4">
+              <div class="about-pic">
+                <img
+                  src="/client/img/smh.jpeg"
+                  alt="profile-pic"
+                  class="rounded-ghost border-2 border-gray-950 shadow-xl shadow-darkgreen md:hidden"
+                />
+              </div>
+            </div>
+            <p class="text-left mt-4 md:mt-0">
+              Hello, my name is <span>Joshua Njoku</span>, and I am a passionate
+              <span>Full-Stack Web Developer</span> based in Canada. During the
+              pandemic, I took it upon myself to learn coding and enrolled in a
+              <span>Full-Stack Engr. Bootcamp </span>at McGill University.
+              Programming has since become more than a career choice; it is a
+              passion that allows me to channel my creative energy into building
+              innovative projects. I am continuously looking for new and
               exciting opportunities to expand my knowledge and enhance my
-              skills, and I am confident that I have what it takes to make a
-              significant impact in the Tech Industry.
+              skills to make a significant impact in the Tech Industry.
             </p>
+            <div class="skills-section mt-8 md:mt-0 md:hidden">
+              <h1
+                class="inline-block mt-4 font-schib text-half text-lightgreen md:text-4xl mb-1.5"
+              >
+                Skills
+              </h1>
+              <div
+                class="skillsMobile py-5 mt-6 mb-3 grid grid-cols-4 grid-rows-4 shadow-inner shadow-zinc-800"
+              >
+                <div class="center">
+                  <img src="logo/icons8-html-5-50.png" alt="html" />
+                </div>
+                <div class="center2">
+                  <img src="logo/icons8-css3-50.png" alt="css" />
+                </div>
+                <div class="center">
+                  <img src="logo/icons8-javascript-50.png" alt="javascript" />
+                </div>
+                <div class="center2">
+                  <img src="logo/react-2.png" alt="react" />
+                </div>
+                <div class="center">
+                  <img src="logo/icons8-node-js-50.png" alt="nodejs" />
+                </div>
+                <div class="center2">
+                  <img src="logo/icons8-tailwind-css-50.png" alt="tailwind" />
+                </div>
+                <div class="center">
+                  <img src="logo/nextjs.png" alt="nextjs" />
+                </div>
+                <div class="center2">
+                  <img src="logo/icons8-express-js-50.png" alt="expressJs" />
+                </div>
+                <div class="center">
+                  <img src="logo/icons8-angularjs-50.png" alt="angular" />
+                </div>
+                <div class="center2">
+                  <img src="logo/icons8-docker-50.png" alt="docker" />
+                </div>
+                <div class="center">
+                  <img src="logo/firebase-1 (1).png" alt="firebase" />
+                </div>
+                <div class="center2">
+                  <img src="logo/icons8-typescript-50.png" alt="typescript" />
+                </div>
+                <div class="center">
+                  <img src="logo/001-postgre.png" alt="postgres" />
+                </div>
+                <div class="center2">
+                  <img src="logo/001-bootstrap.png" alt="bootstrap" />
+                </div>
+                <div class="center">
+                  <img src="logo/laravel-2.png" alt="laravel" />
+                </div>
+                <div class="center2">
+                  <img src="logo/icons8-amazon-web-services-50.png" alt="aws" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-20 hidden md:block">
+            <h1
+              class="inline-block mt-4 font-schib text-half text-lightgreen md:text-4xl mb-1.5"
+            >
+              Skills
+            </h1>
+            <div
+              class="skills mb-3 grid grid-cols-5 grid-rows-3 shadow-inner shadow-zinc-800"
+            >
+              <div class="center">
+                <img src="logo/icons8-html-5-50.png" alt="html" />
+                  <!-- <div class="overlay">
+                    <span class="skill-text">JavaScript</span>
+                  </div> -->
+              </div>
+              <div class="center2">
+                <img src="logo/icons8-css3-50.png" alt="css" />
+              </div>
+              <div class="center">
+                <img src="logo/icons8-javascript-50.png" alt="javascript" />
+              </div>
+              <div class="center2">
+                <img src="logo/react-2.png" alt="react" />
+              </div>
+              <div class="center">
+                <img src="logo/icons8-node-js-50.png" alt="nodejs" />
+              </div>
+              <div class="center2">
+                <img src="logo/icons8-tailwind-css-50.png" alt="tailwind" />
+              </div>
+              <div class="center">
+                <img src="logo/nextjs.png" alt="nextjs" />
+              </div>
+              <div class="center2">
+                <img src="logo/icons8-express-js-50.png" alt="expressJs" />
+              </div>
+              <div class="center">
+                <img src="logo/icons8-angularjs-50.png" alt="angular" />
+              </div>
+              <div class="center2">
+                <img src="logo/icons8-docker-50.png" alt="docker" />
+              </div>
+              <div class="center">
+                <img src="logo/firebase-1 (1).png" alt="firebase" />
+              </div>
+              <div class="center2">
+                <img src="logo/icons8-typescript-50.png" alt="typescript" />
+              </div>
+              <div class="center">
+                <img src="logo/001-postgre.png" alt="postgres" />
+              </div>
+              <div class="center2">
+                <img src="logo/001-bootstrap.png" alt="bootstrap" />
+              </div>
+              <div class="center">
+                <img src="logo/laravel-2.png" alt="laravel" />
+              </div>
+            </div>
           </div>
         </section>
+        <!-- now a section for the projects, where we display our projects in a slidershow display, so each card in the show has another image slide show and under it the project description and under that two buttons for "view code" and "watch demo" side by side -->
+        <section class="projects flex items-center justify-center flex-col md:h-screen">
+          <h1
+            class="mt-4 font-schib text-half text-lightgreen md:text-4xl mb-1.5"
+          >
+            Projects
+          </h1>
+          <div class="project-cards">
+            <div class="project-card">
+              <div class="project-card-image">
+                <img src="images/1.png" alt="project1" />
+              </div>
+              <div class="project-card-description">
+                <h1>Project 1</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, quae.
+                </p>
+                <div class="project-card-buttons">
+                  <button class="project-card-button">View Code</button>
+                  <button class="project-card-button">Watch Demo</button>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-image">
+                <img src="images/2.png" alt="project2" />
+              </div>
+              <div class="project-card-description">
+                <h1>Project 2</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, quae.
+                </p>
+                <div class="project-card-buttons border border-oddgreen inline text-white py-1 px-0.5  rounded-lg">
+                  <button class="project-card-button m-0.5 mt-0.75 py-0 px-3.25 rounded-lg border border-green-800 bg-green-500">View Code</button>
+                  <button class="project-card-button">Watch Demo</button>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-image">
+                <img src="images/3.png" alt="project3" />
+              </div>
+              <div class="project-card-description">
+                <h1>Project 3</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, quae.
+                </p>
+                <div class="project-card-buttons">
+                  <button class="project-card-button">View Code</button>
+                  <button class="project-card-button">Watch Demo</button>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-image">
+                <img src="images/4.png" alt="project4" />
+              </div>
+              <div class="project-card-description">
+                <h1>Project 4</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates, quae.
+                </p>
+                <div class="project-card-buttons">
+                  <button class="project-card-button">View Code</button>
+                  <button class="project-card-button">Watch Demo</button>
+                </div>
       </div>
     </div>
   </body>
+  <script>
+    document
+      .getElementById("nav-items")
+      .addEventListener("click", function (event) {
+        if (event.target.tagName === "A") {
+          const navItems = document.getElementsByClassName("nav");
+          for (let i = 0; i < navItems.length; i++) {
+            navItems[i].classList.remove("active");
+          }
+          event.target.parentElement.classList.add("active");
+        }
+      });
+  </script>
+
   <!-- <div class="comments">
     With a passion for
           Innovation and a keen eye for design, I strive to push the boundaries
